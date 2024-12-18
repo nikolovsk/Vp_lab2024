@@ -4,6 +4,7 @@ import jakarta.annotation.PostConstruct;
 import mk.finki.ukim.mk.lab.model.Event;
 import mk.finki.ukim.mk.lab.model.Location;
 import mk.finki.ukim.mk.lab.model.SavedBooking;
+import mk.finki.ukim.mk.lab.model.User;
 import mk.finki.ukim.mk.lab.repository.impl.LocationRepository;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +15,7 @@ import java.util.List;
 public class DataHolder {
     public static List<Event> events = new ArrayList<>();
     public static List<SavedBooking> savedBookings = new ArrayList<>();
+    public static List<User> users = new ArrayList<>();
     private final LocationRepository locationRepository;
 
 

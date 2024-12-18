@@ -31,7 +31,8 @@ public class LocationController {
 
         List<Location> locations = this.locationService.findAll();
         model.addAttribute("locations", locations);
-        return "listLocations";
+        model.addAttribute("bodyContent", "listLocations");
+        return "master-template";
     }
 
     @PostMapping("/add")

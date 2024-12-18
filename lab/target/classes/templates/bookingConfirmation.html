@@ -29,46 +29,46 @@
     </style>
 </head>
 <body>
-<section>
-    <header>
-        <h1>Event Booking page - Booking confirmation </h1>
-    </header>
-    <table>
-        <tr>
-            <th colspan="2">
-                Your Booking Status
-            </th>
-        </tr>
-        <tr>
-            <td><b>Attendee Name </b></td>
-            <td th:text="${hostName} ? ${hostName} : 'Petko Petkov'"></td>
-        </tr>
-        <tr>
-            <td><b>Client IP Address</b></td>
-            <td th:text="${hostAddress != null} ? ${hostAddress} : '127.0.0.1'"></td>
-        </tr>
-        <tr>
-            <td><b>Booking for Event</b></td>
-            <td th:text="${eventName != null} ? ${eventName} : 'Oppenheimer'"></td>
-        </tr>
-        <tr>
-            <td><b>Event Location</b></td>
-            <td th:text="${location != null && !location.isEmpty()} ? ${location} : 'Location 1'"></td>
-        </tr>
-        <tr>
-            <td><b>Number of tickets</b></td>
-            <td th:text="${numOfTickets != null} ? ${numOfTickets} : '2'"></td>
-        </tr>
-    </table>
-    <br>
-    <form th:method="GET" th:action="@{/eventBookingController}">
-        <label for="bookingSearch">Search Booking By Name</label>
-        <input type="text" id="bookingSearch" name="bookingSearch">
+    <section>
+        <header>
+            <h1>Event Booking page - Booking confirmation </h1>
+        </header>
+        <table>
+            <tr>
+                <th colspan="2">
+                    Your Booking Status
+                </th>
+            </tr>
+            <tr>
+                <td><b>Attendee Name </b></td>
+                <td th:text="${hostName} ? ${hostName} : 'Petko Petkov'"></td>
+            </tr>
+            <tr>
+                <td><b>Client IP Address</b></td>
+                <td th:text="${hostAddress != null} ? ${hostAddress} : '127.0.0.1'"></td>
+            </tr>
+            <tr>
+                <td><b>Booking for Event</b></td>
+                <td th:text="${eventName != null} ? ${eventName} : 'Oppenheimer'"></td>
+            </tr>
+            <tr>
+                <td><b>Event Location</b></td>
+                <td th:text="${location != null && !location.isEmpty()} ? ${location} : 'Location 1'"></td>
+            </tr>
+            <tr>
+                <td><b>Number of tickets</b></td>
+                <td th:text="${numOfTickets != null} ? ${numOfTickets} : '2'"></td>
+            </tr>
+        </table>
         <br>
-        <input type="submit" class="btn btn-primary" value="Submit" />
-        <a type="button" class="btn btn-primary" href="/events">Back</a>
-    </form>
-    <br/>
-</section>
+        <form th:method="GET" th:action="@{/eventBookingController}">
+            <label for="bookingSearch">Search Booking By Name</label>
+            <input type="text" id="bookingSearch" name="bookingSearch">
+            <br>
+            <input type="submit" class="btn btn-primary" value="Submit" />
+            <a type="button" class="btn btn-primary" href="/events">Back</a>
+        </form>
+        <br/>
+    </section>
 </body>
 </html>
